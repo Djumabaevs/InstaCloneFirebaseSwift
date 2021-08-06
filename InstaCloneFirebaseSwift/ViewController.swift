@@ -26,12 +26,20 @@ class ViewController: UIViewController {
         
         if emailText.text != "" && passwordText.text != "" {
             
-            Auth.auth().createUser(withEmail: emailText.text!, password: passwordText.text!, completion: <#T##((AuthDataResult?, Error?) -> Void)?##((AuthDataResult?, Error?) -> Void)?##(AuthDataResult?, Error?) -> Void#>)
+            Auth.auth().createUser(withEmail: emailText.text!, password: passwordText.text!) { (authdata, error) in
+            
+                if error != nil {
+                    
+                } else {
+                    self.performSegue(withIdentifier: "toFeedVC", sender: nil)
+                }
+            }
         } else {
             
             let alert = UIAlertController(title: "Error.", message: "Email/Password?", preferredStyle: UIAlertController.Style.alert)
             let okButton = UIAlertAction(title: "OK.", style: UIAlertAction.Style.default, handler: nil)
-            
+            alert.addAction(okButton)
+            self.present(alert, animated: true, completion: nil)
         }
         
         
