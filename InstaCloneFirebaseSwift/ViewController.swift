@@ -29,6 +29,8 @@ class ViewController: UIViewController {
             Auth.auth().createUser(withEmail: emailText.text!, password: passwordText.text!, completion: <#T##((AuthDataResult?, Error?) -> Void)?##((AuthDataResult?, Error?) -> Void)?##(AuthDataResult?, Error?) -> Void#>)
         } else {
             
+            let alert = UIAlertController(title: "Error.", message: "Email/Password?", preferredStyle: UIAlertController.Style.alert)
+            
         }
         
         
