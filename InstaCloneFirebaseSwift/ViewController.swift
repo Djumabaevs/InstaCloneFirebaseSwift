@@ -35,14 +35,15 @@ class ViewController: UIViewController {
                 }
             }
         } else {
-            
-            let alert = UIAlertController(title: "Error.", message: "Email/Password?", preferredStyle: UIAlertController.Style.alert)
-            let okButton = UIAlertAction(title: "OK.", style: UIAlertAction.Style.default, handler: nil)
-            alert.addAction(okButton)
-            self.present(alert, animated: true, completion: nil)
+            makeAlert(title: "Error!", message: "email/password?")
         }
-        
-        
+    }
+    
+    func makeAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        let okButton = UIAlertAction(title: "OK.", style: UIAlertAction.Style.default, handler: nil)
+        alert.addAction(okButton)
+        self.present(alert, animated: true, completion: nil)
     }
 }
 
