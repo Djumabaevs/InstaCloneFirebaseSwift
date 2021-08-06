@@ -29,6 +29,7 @@ class ViewController: UIViewController {
             Auth.auth().createUser(withEmail: emailText.text!, password: passwordText.text!) { (authdata, error) in
             
                 if error != nil {
+                    self.makeAlert(title: "Error!", message: error?.localizedDescription ?? "Error!")
                     
                 } else {
                     self.performSegue(withIdentifier: "toFeedVC", sender: nil)
