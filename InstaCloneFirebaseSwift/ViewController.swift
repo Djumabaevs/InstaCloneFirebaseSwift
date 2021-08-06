@@ -30,6 +30,7 @@ class ViewController: UIViewController {
         } else {
             
             let alert = UIAlertController(title: "Error.", message: "Email/Password?", preferredStyle: UIAlertController.Style.alert)
+            let okButton = UIAlertAction(title: "OK.", style: UIAlertAction.Style.default, handler: nil)
             
         }
         
