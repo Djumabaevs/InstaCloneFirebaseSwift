@@ -24,6 +24,14 @@ class ViewController: UIViewController {
     
     @IBAction func signUpClicked(_ sender: Any) {
         
+        if emailText.text != "" && passwordText.text != "" {
+            
+            Auth.auth().createUser(withEmail: emailText.text!, password: passwordText.text!, completion: <#T##((AuthDataResult?, Error?) -> Void)?##((AuthDataResult?, Error?) -> Void)?##(AuthDataResult?, Error?) -> Void#>)
+        } else {
+            
+        }
+        
+        
     }
 }
 
