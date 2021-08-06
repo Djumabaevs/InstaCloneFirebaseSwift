@@ -11,7 +11,7 @@
         <!--Upload-->
         <scene sceneID="yhI-1s-ze9">
             <objects>
-                <viewController id="xe4-Q9-Vkk" sceneMemberID="viewController">
+                <viewController id="xe4-Q9-Vkk" customClass="UploadViewController" customModule="InstaCloneFirebaseSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="k85-Ie-mH6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -27,23 +27,42 @@
         <!--Settings-->
         <scene sceneID="i1a-f7-xFk">
             <objects>
-                <viewController id="cjR-qP-BsM" sceneMemberID="viewController">
+                <viewController id="cjR-qP-BsM" customClass="SettingsViewController" customModule="InstaCloneFirebaseSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yUm-gf-N9S">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KpB-gU-QWo">
+                                <rect key="frame" x="120" y="300" width="175" height="101"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="logoutClicked:" destination="cjR-qP-BsM" eventType="touchUpInside" id="I3b-Vs-Lcz"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="wqp-D7-TXb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wqp-D7-TXb" firstAttribute="bottom" secondItem="KpB-gU-QWo" secondAttribute="bottom" constant="412" id="FYe-P6-ZxR"/>
+                            <constraint firstItem="KpB-gU-QWo" firstAttribute="leading" secondItem="wqp-D7-TXb" secondAttribute="leading" constant="120" id="G4y-Ap-cNq"/>
+                            <constraint firstItem="KpB-gU-QWo" firstAttribute="centerX" secondItem="yUm-gf-N9S" secondAttribute="centerX" id="dDD-7J-n7w"/>
+                            <constraint firstItem="KpB-gU-QWo" firstAttribute="top" secondItem="wqp-D7-TXb" secondAttribute="top" constant="256" id="zbh-Di-oyP"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="case.fill" catalog="system" id="z0c-82-sxO"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="toViewController" modalPresentationStyle="fullScreen" id="5ff-Oy-enB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O5W-gP-6hw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-508" y="900"/>
+            <point key="canvasLocation" x="-508.69565217391306" y="900"/>
         </scene>
         <!--Feed-->
         <scene sceneID="0za-Hc-goS">
             <objects>
-                <viewController id="Yaa-UA-FyV" sceneMemberID="viewController">
+                <viewController id="Yaa-UA-FyV" customClass="FeedViewController" customModule="InstaCloneFirebaseSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sWU-ZU-tQ7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
