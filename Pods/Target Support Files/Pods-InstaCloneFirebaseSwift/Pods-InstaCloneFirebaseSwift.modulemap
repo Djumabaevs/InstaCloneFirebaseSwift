@@ -1,0 +1,6 @@
+framework module Pods_InstaCloneFirebaseSwift {
+  umbrella header "Pods-InstaCloneFirebaseSwift-umbrella.h"
+
+  export *
+  module * { export * }
+}
