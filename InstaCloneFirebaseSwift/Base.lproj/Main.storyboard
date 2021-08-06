@@ -24,6 +24,22 @@
             </objects>
             <point key="canvasLocation" x="-548" y="211"/>
         </scene>
+        <!--Settings-->
+        <scene sceneID="i1a-f7-xFk">
+            <objects>
+                <viewController id="cjR-qP-BsM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yUm-gf-N9S">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="wqp-D7-TXb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" image="case.fill" catalog="system" id="z0c-82-sxO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O5W-gP-6hw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-508" y="900"/>
+        </scene>
         <!--Feed-->
         <scene sceneID="0za-Hc-goS">
             <objects>
@@ -52,6 +68,7 @@
                     <connections>
                         <segue destination="Yaa-UA-FyV" kind="relationship" relationship="viewControllers" id="hEO-Or-WzX"/>
                         <segue destination="xe4-Q9-Vkk" kind="relationship" relationship="viewControllers" id="Dgt-dT-5hT"/>
+                        <segue destination="cjR-qP-BsM" kind="relationship" relationship="viewControllers" id="7Du-sw-Y4W"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0M0-nw-c4c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -107,7 +124,7 @@
                                     <constraint firstAttribute="height" constant="89" id="RuT-U9-2iC"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" systemColor="systemPurpleColor"/>
                                 <color key="highlightedColor" systemColor="systemPurpleColor"/>
                             </label>
                         </subviews>
@@ -144,6 +161,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="case.fill" catalog="system" width="128" height="98"/>
         <image name="circle.circle.fill" catalog="system" width="128" height="121"/>
         <image name="circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">

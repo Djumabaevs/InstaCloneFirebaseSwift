@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func signInClicked(_ sender: Any) {
-        
+        performSegue(withIdentifier: "toFeedVC", sender: nil)
     }
     
     @IBAction func signUpClicked(_ sender: Any) {

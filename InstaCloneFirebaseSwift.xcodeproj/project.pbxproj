@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,9 @@
 		34C3B42726BC124700E12CC9 /* InstaCloneFirebaseSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C3B42626BC124700E12CC9 /* InstaCloneFirebaseSwiftTests.swift */; };
 		34C3B43226BC124700E12CC9 /* InstaCloneFirebaseSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C3B43126BC124700E12CC9 /* InstaCloneFirebaseSwiftUITests.swift */; };
 		34C3B44026BC16E100E12CC9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 34C3B43F26BC16E100E12CC9 /* GoogleService-Info.plist */; };
+		34C3B44226BCF84900E12CC9 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C3B44126BCF84800E12CC9 /* FeedViewController.swift */; };
+		34C3B44426BCF85B00E12CC9 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C3B44326BCF85B00E12CC9 /* UploadViewController.swift */; };
+		34C3B44626BCF86B00E12CC9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C3B44526BCF86B00E12CC9 /* SettingsViewController.swift */; };
 		7ECEB6E3943F3B016D341B0F /* Pods_InstaCloneFirebaseSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B3226C180467911492A9E11 /* Pods_InstaCloneFirebaseSwift.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +58,9 @@
 		34C3B43126BC124700E12CC9 /* InstaCloneFirebaseSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstaCloneFirebaseSwiftUITests.swift; sourceTree = "<group>"; };
 		34C3B43326BC124700E12CC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		34C3B43F26BC16E100E12CC9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		34C3B44126BCF84800E12CC9 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		34C3B44326BCF85B00E12CC9 /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
+		34C3B44526BCF86B00E12CC9 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		772D9379F5C959A86D3B8554 /* Pods-InstaCloneFirebaseSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaCloneFirebaseSwift.release.xcconfig"; path = "Target Support Files/Pods-InstaCloneFirebaseSwift/Pods-InstaCloneFirebaseSwift.release.xcconfig"; sourceTree = "<group>"; };
 		95A7EC13153B56369B0F59E9 /* Pods-InstaCloneFirebaseSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaCloneFirebaseSwift.debug.xcconfig"; path = "Target Support Files/Pods-InstaCloneFirebaseSwift/Pods-InstaCloneFirebaseSwift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -91,7 +97,6 @@
 				95A7EC13153B56369B0F59E9 /* Pods-InstaCloneFirebaseSwift.debug.xcconfig */,
 				772D9379F5C959A86D3B8554 /* Pods-InstaCloneFirebaseSwift.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -123,12 +128,15 @@
 				34C3B40C26BC124500E12CC9 /* AppDelegate.swift */,
 				34C3B40E26BC124500E12CC9 /* SceneDelegate.swift */,
 				34C3B43F26BC16E100E12CC9 /* GoogleService-Info.plist */,
-				34C3B41026BC124500E12CC9 /* ViewController.swift */,
 				34C3B41226BC124500E12CC9 /* Main.storyboard */,
 				34C3B41826BC124700E12CC9 /* Assets.xcassets */,
 				34C3B41A26BC124700E12CC9 /* LaunchScreen.storyboard */,
 				34C3B41D26BC124700E12CC9 /* Info.plist */,
 				34C3B41526BC124500E12CC9 /* InstaCloneFirebaseSwift.xcdatamodeld */,
+				34C3B41026BC124500E12CC9 /* ViewController.swift */,
+				34C3B44126BCF84800E12CC9 /* FeedViewController.swift */,
+				34C3B44326BCF85B00E12CC9 /* UploadViewController.swift */,
+				34C3B44526BCF86B00E12CC9 /* SettingsViewController.swift */,
 			);
 			path = InstaCloneFirebaseSwift;
 			sourceTree = "<group>";
@@ -335,7 +343,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				34C3B41126BC124500E12CC9 /* ViewController.swift in Sources */,
+				34C3B44426BCF85B00E12CC9 /* UploadViewController.swift in Sources */,
+				34C3B44626BCF86B00E12CC9 /* SettingsViewController.swift in Sources */,
 				34C3B40D26BC124500E12CC9 /* AppDelegate.swift in Sources */,
+				34C3B44226BCF84900E12CC9 /* FeedViewController.swift in Sources */,
 				34C3B41726BC124500E12CC9 /* InstaCloneFirebaseSwift.xcdatamodeld in Sources */,
 				34C3B40F26BC124500E12CC9 /* SceneDelegate.swift in Sources */,
 			);
