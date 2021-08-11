@@ -46,7 +46,14 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
             let imageReference = mediaFolder.child("image.jpg")
             imageReference.putData(data, metadata: nil) { (metadata, error) in
                 if error != nil {
-                    
+                    print(error?.localizedDescription)
+                } else {
+                    imageReference.downloadURL { (url, error) in
+                        if error == nil {
+                            let imageUrl = url?.absoluteString
+                            print(imageUrl)
+                        }
+                    }
                 }
             }
         }
