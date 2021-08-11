@@ -40,6 +40,9 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
         
         let storage = Storage.storage()
         let storagReference = storage.reference()
+        let mediaFolder = storagReference.child("media")
+        
+        
         
     }
     
