@@ -42,7 +42,14 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
         let storagReference = storage.reference()
         let mediaFolder = storagReference.child("media")
         
-        
+        if let data = imageView.image?.jpegData(compressionQuality: 0.5) {
+            let imageReference = mediaFolder.child("image.jpg")
+            imageReference.putData(data, metadata: nil) { (metadata, error) in
+                if error != nil {
+                    
+                }
+            }
+        }
         
     }
     
