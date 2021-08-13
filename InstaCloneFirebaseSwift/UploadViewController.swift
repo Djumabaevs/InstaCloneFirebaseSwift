@@ -67,6 +67,8 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
                             
                             //DATABASE
                             
+                            let firestoreDatabase = Firestore.firestore()
+                            
                         }
                     }
                 }
