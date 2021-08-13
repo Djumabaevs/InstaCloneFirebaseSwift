@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		340B9AF426C64A9200E79FAB /* FeedCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340B9AF326C64A9200E79FAB /* FeedCellTableViewCell.swift */; };
 		34C3B40D26BC124500E12CC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C3B40C26BC124500E12CC9 /* AppDelegate.swift */; };
 		34C3B40F26BC124500E12CC9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C3B40E26BC124500E12CC9 /* SceneDelegate.swift */; };
 		34C3B41126BC124500E12CC9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C3B41026BC124500E12CC9 /* ViewController.swift */; };
@@ -42,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		1B3226C180467911492A9E11 /* Pods_InstaCloneFirebaseSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstaCloneFirebaseSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		340B9AF326C64A9200E79FAB /* FeedCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCellTableViewCell.swift; sourceTree = "<group>"; };
 		34C3B40926BC124500E12CC9 /* InstaCloneFirebaseSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaCloneFirebaseSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34C3B40C26BC124500E12CC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34C3B40E26BC124500E12CC9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				34C3B44126BCF84800E12CC9 /* FeedViewController.swift */,
 				34C3B44326BCF85B00E12CC9 /* UploadViewController.swift */,
 				34C3B44526BCF86B00E12CC9 /* SettingsViewController.swift */,
+				340B9AF326C64A9200E79FAB /* FeedCellTableViewCell.swift */,
 			);
 			path = InstaCloneFirebaseSwift;
 			sourceTree = "<group>";
@@ -347,6 +350,7 @@
 				34C3B44626BCF86B00E12CC9 /* SettingsViewController.swift in Sources */,
 				34C3B40D26BC124500E12CC9 /* AppDelegate.swift in Sources */,
 				34C3B44226BCF84900E12CC9 /* FeedViewController.swift in Sources */,
+				340B9AF426C64A9200E79FAB /* FeedCellTableViewCell.swift in Sources */,
 				34C3B41726BC124500E12CC9 /* InstaCloneFirebaseSwift.xcdatamodeld in Sources */,
 				34C3B40F26BC124500E12CC9 /* SceneDelegate.swift in Sources */,
 			);
