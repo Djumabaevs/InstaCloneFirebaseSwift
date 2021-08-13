@@ -69,6 +69,9 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
                             
                             let firestoreDatabase = Firestore.firestore()
                             
+                            let firestoreReference: DocumentReference? = nil
+                            
+                            
                         }
                     }
                 }
