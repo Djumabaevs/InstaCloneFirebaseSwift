@@ -78,8 +78,9 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
                                 if error != nil {
                                     self.makeAlert(title: "Error!", message: error?.localizedDescription ?? "Error")
                                 } else {
-                                    self.imageView.image = UIImage("select.png")
+                                    self.imageView.image = UIImage(named: "select")
                                     self.commentText.text = ""
+                                    self.tabBarController?.selectedIndex = 0
                                 }
                             })
                             
