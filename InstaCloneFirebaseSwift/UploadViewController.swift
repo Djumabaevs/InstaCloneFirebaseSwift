@@ -71,6 +71,9 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
                             
                             let firestoreReference: DocumentReference? = nil
                             
+                            let firestorePost = ["imageUrl":imageUrl, "postedBy":Auth.auth().currentUser!.email!, "postComment":self.commentText.text!]
+                            
+                            
                             
                         }
                     }
