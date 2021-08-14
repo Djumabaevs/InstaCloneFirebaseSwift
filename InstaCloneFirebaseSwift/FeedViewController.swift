@@ -12,7 +12,10 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     @IBOutlet weak var tableView: UITableView!
     
-    
+    var userEmailArray = [String]()
+    var userCommentArray = [String]()
+    var userImageArray = [String]()
+    var likeArray = [Int]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +23,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.delegate = self
         tableView.dataSource = self
         
+        getDataFromFirestore()
     }
     
     func getDataFromFirestore() {
@@ -36,24 +40,34 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
 //                        print(documentId)
                         
                         if let postedBy = document.get("postedBy") as? String {
-                            print(postedBy)
+                            self.userEmailArray.append(postedBy)
+                        }
+                        if let postComment = document.get("postComment") as? String {
+                            self.userCommentArray.append(postComment)
+                        }
+                        if let likes = document.get("likes") as? Int {
+                            self.likeArray.append(likes)
+                        }
+                        if let imageUrl = document.get("imageUrl") as? String {
+                            self.userImageArray.append(imageUrl)
                         }
                     }
+                    self.tableView.reloadData()
                 }
             }
         }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return userEmailArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! FeedCellTableViewCell
         
-        cell.emailLabel.text = "user@email.com"
-        cell.likeLabel.text = "0"
-        cell.commentLabel.text = "comment"
+        cell.emailLabel.text = userEmailArray[indexPath.row]
+        cell.likeLabel.text = String(likeArray[indexPath.row])
+        cell.commentLabel.text = userCommentArray[indexPath.row]
         cell.userImageView?.image = UIImage(named: "select")
         return cell
     }
