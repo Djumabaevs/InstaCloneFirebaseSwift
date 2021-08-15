@@ -49,6 +49,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
                     
                     for document in snapshot!.documents {
                         let documentId = document.documentID
+                        self.documentIdArray.append(documentId)
 //                        print(documentId)
                         
                         if let postedBy = document.get("postedBy") as? String {
@@ -82,6 +83,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.commentLabel.text = userCommentArray[indexPath.row]
         cell.userImageView.sd_setImage(with: URL(string: userImageArray[indexPath.row]))
 //        cell.userImageView?.image = UIImage(named: "select")
+        cell.documentId.text = documentIdArray[indexPath.row]
         return cell
     }
     
