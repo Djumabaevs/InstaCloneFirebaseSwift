@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+import SDWebImage
 
 class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
 
@@ -16,6 +17,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     var userCommentArray = [String]()
     var userImageArray = [String]()
     var likeArray = [Int]()
+    var documentIdArray = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,12 +31,22 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     func getDataFromFirestore() {
         let firestoreDatabase = Firestore.firestore()
         
-        firestoreDatabase.collection("Posts").addSnapshotListener { snapshot, error in
+        firestoreDatabase
+            .collection("Posts")
+            .order(by: "date", descending: true)
+            .addSnapshotListener { snapshot, error in
             if error != nil {
                 print(error?.localizedDescription)
             } else {
                 
                 if snapshot?.isEmpty != true && snapshot != nil {
+                    
+                    self.likeArray.removeAll(keepingCapacity: false)
+                    self.userImageArray.removeAll(keepingCapacity: false)
+                    self.userCommentArray.removeAll(keepingCapacity: false)
+                    self.userEmailArray.removeAll(keepingCapacity: false)
+                    self.documentIdArray.removeAll(keepingCapacity: false)
+                    
                     for document in snapshot!.documents {
                         let documentId = document.documentID
 //                        print(documentId)
@@ -68,7 +80,8 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.emailLabel.text = userEmailArray[indexPath.row]
         cell.likeLabel.text = String(likeArray[indexPath.row])
         cell.commentLabel.text = userCommentArray[indexPath.row]
-        cell.userImageView?.image = UIImage(named: "select")
+        cell.userImageView.sd_setImage(with: URL(string: userImageArray[indexPath.row]))
+//        cell.userImageView?.image = UIImage(named: "select")
         return cell
     }
     
